@@ -1,0 +1,701 @@
+/* ==========================================================================
+   Updated style.css for enhanced responsiveness (Theme Unchanged)
+   ========================================================================== */
+
+/* ====== General Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Consistent font */
+}
+
+body {
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* ====== Top Header ====== */
+.top-header {
+  background: #006400; /* Dark Green */
+  color: #fff;
+  padding: 8px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.headquote {
+  font-weight: bold;
+  color: #fff; /* White */
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff; /* White */
+  padding: 12px 30px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Keep navbar visible on scroll */
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0a7e07; /* Green */
+  font-size: 24px; /* Larger font for logo name */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar .logo img {
+  height: 100px; /* Consistent logo size */
+  width: 100px; /* Consistent logo size */
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.navbar .logo img:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333; /* Dark text for links */
+  font-weight: 500;
+  padding: 8px 14px; /* Increased padding */
+  border-radius: 6px; /* Rounded corners */
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: #006400; /* Dark Green on hover/active */
+  color: #fff; /* White text on hover/active */
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff; /* White background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 100;
+  min-width: 180px; /* Ensure dropdown is wide enough */
+  border-radius: 6px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: #333; /* Dark text */
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: #006400; /* Dark Green on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* ====== Hero Section (General) ====== */
+.hero {
+  background: linear-gradient(rgba(2, 255, 15, 0.514), rgba(0, 0, 0, 0.5)),
+    url('assets/ChatGPT Image Oct 4, 2025, 02_17_40 PM.png') center/cover no-repeat;
+  color: #1eff00b0; /* Light green */
+  text-align: center;
+  padding: 150px 20px; /* Adjusted padding for better balance */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  border-bottom: 4px solid #006400; /* Dark Green border */
+}
+
+.hero h1 { /* Specific for services.html */
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 { /* Specific for index.html, about.html, product pages */
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff; /* White */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.slogan {
+  margin-top: 20px;
+  font-size: 22px; /* Consistent slogan size */
+  font-weight: bold;
+  color: #aaffaa; /* Lighter green for slogan */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.slogan:hover {
+  color: #00ff00; /* Bright green on hover */
+  transform: scale(1.05);
+}
+
+/* ====== About Section ====== */
+.about.container, .content.container, .doctor-form.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about h2, .content h2, .doctor-form h2 {
+  color: #006400; /* Dark Green */
+  font-size: 28px;
+  margin-bottom: 15px;
+  border-left: 5px solid #006400; /* Dark Green border */
+  padding-left: 10px;
+}
+
+.about h3 {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #006400; /* Dark Green */
+}
+
+.about p, .content p {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.about ul {
+  margin: 15px 0 20px 20px;
+  list-style: disc;
+  color: #333;
+}
+
+.about .highlight, .content .highlight {
+  background: #eaffea; /* Light green background */
+  border-left: 5px solid #28a745; /* Green border */
+  padding: 15px;
+  font-weight: bold;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+
+/* ====== Services List ====== */
+.services-list li {
+  padding: 12px;
+  margin: 10px 0;
+  background: #f1fdf1; /* Very light green */
+  border-left: 5px solid #006400; /* Dark Green */
+  border-radius: 6px;
+}
+
+/* ====== Doctor Form ====== */
+.form-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #006400; /* Dark Green */
+}
+
+.form-box input,
+.form-box textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  transition: border 0.3s;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+  border-color: #006400; /* Dark Green on focus */
+  outline: none;
+}
+
+.form-box button {
+  background: #006400; /* Dark Green */
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-box button:hover {
+  background: #004d00; /* Darker Green on hover */
+}
+
+/* ====== Products Section ====== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible grid */
+  gap: 25px;
+  padding: 60px 10%; /* Horizontal padding for larger screens */
+  background: #f9f9f9; /* Light background */
+}
+
+.card {
+  background: #fff; /* White background */
+  border: 1px solid #006400; /* Dark Green border */
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 100, 0, 0.1);
+  overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 100, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px; /* Fixed height for product images */
+  object-fit: contain; /* Ensures image fits without cropping */
+  border-radius: 8px;
+}
+
+.card h3 {
+  color: #006400; /* Dark Green */
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.price {
+  color: #333; /* Dark text */
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.view-btn {
+  background: #006400; /* Dark Green */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background: #009e00; /* Slightly lighter green on hover */
+}
+
+/* ====== Popup Modal (Product Details) ====== */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff; /* White background */
+  color: #006400; /* Dark Green for headings */
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Max width for larger screens */
+  box-shadow: 0 6px 15px rgba(0, 100, 0, 0.3);
+  position: relative;
+  animation: fadeIn 0.3s ease; /* Smooth fade-in animation */
+}
+
+.popup-content img {
+  width: 180px; /* Fixed width for popup image */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.popup-content h3 {
+  margin-bottom: 8px;
+}
+
+.popup-content p {
+  color: #333; /* Dark text for description */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: red; /* Red for close button */
+  cursor: pointer;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 12px;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d; /* Darker WhatsApp green on hover */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #006400; /* Dark Green */
+  color: white;
+  padding: 40px 10%; /* Horizontal padding for larger screens */
+  margin-top: 40px; /* Space above footer */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Flexible grid */
+  gap: 30px;
+}
+
+.footer-box h2, .footer-box h3 {
+  margin-bottom: 12px;
+  color: #fff; /* White */
+}
+
+.footer-box p, .footer-box ul li a {
+  color: #f0f0f0; /* Light grey for text and links */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 8px;
+}
+
+.footer-box ul li a:hover {
+  color: #d4ffd4; /* Lighter green on hover */
+  text-decoration: underline;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  color: white;
+  transition: 0.3s;
+}
+
+.social li a:hover {
+  color: #d4ffd4; /* Lighter green on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #fff; /* White border */
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   Responsive Adjustments (Media Queries)
+   ========================================================================== */
+
+/* --- Large devices (desktops, 992px and up) --- */
+@media (min-width: 992px) {
+  .navbar {
+    padding: 15px 50px; /* More padding on larger screens */
+  }
+  .nav-links {
+    gap: 30px; /* More space between links */
+  }
+  .hero {
+    padding: 200px 20px; /* Taller hero section */
+  }
+  .products {
+    padding: 80px 10%; /* More vertical padding */
+  }
+  footer {
+    padding: 50px 10%; /* More vertical padding */
+  }
+}
+
+/* --- Medium devices (tablets, 768px and up) --- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    padding: 10px 25px;
+  }
+  .navbar .logo img {
+    height: 80px;
+    width: 80px;
+  }
+  .navbar .logo span {
+    font-size: 20px;
+  }
+  .nav-links {
+    gap: 15px;
+  }
+  .hero {
+    padding: 150px 20px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero h2 {
+    font-size: 38px;
+  }
+  .slogan {
+    font-size: 18px;
+  }
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjust card size */
+    padding: 50px 5%;
+  }
+  .card img {
+    height: 160px; /* Adjust image height */
+  }
+  .about.container, .content.container, .doctor-form.container {
+    margin: 30px auto;
+    padding: 15px;
+  }
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust footer columns */
+    gap: 20px;
+  }
+  footer {
+    padding: 30px 5%;
+  }
+}
+
+/* --- Small devices (phones, less than 768px) --- */
+@media (max-width: 767px) {
+  .top-header {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .headquote {
+    white-space: normal; /* Allow marquee text to wrap if too long */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block; /* Ensure it takes up space */
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px 15px;
+  }
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+  .navbar .logo img {
+    height: 70px;
+    width: 70px;
+  }
+  .navbar .logo span {
+    font-size: 20px;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 5px; /* Reduced gap */
+    margin-top: 10px;
+  }
+  .nav-links li {
+    width: 100%; /* Full width for stacked links */
+  }
+  .nav-links a {
+    padding: 10px 0; /* Full width clickable area */
+    border-bottom: 1px solid rgba(0, 100, 0, 0.1); /* Separator for links */
+  }
+  .nav-links li:last-child a {
+    border-bottom: none; /* No border on last link */
+  }
+  .dropdown-menu {
+    position: static; /* Make dropdown static in mobile nav */
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background: #f9f9f9; /* Slightly different background for sub-items */
+  }
+  .dropdown-menu li a {
+    padding: 8px 20px; /* Indent dropdown items */
+    color: #555;
+  }
+  .dropdown-menu li a:hover {
+    background: #e0ffe0; /* Lighter hover for sub-items */
+    color: #006400;
+  }
+
+  .hero {
+    padding: 100px 15px; /* Reduced padding for mobile hero */
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero h2 {
+    font-size: 30px;
+  }
+  .slogan {
+    font-size: 16px;
+  }
+
+  .products {
+    grid-template-columns: 1fr; /* Single column for products on small screens */
+    padding: 30px 15px;
+    gap: 20px;
+  }
+  .card img {
+    height: 150px; /* Adjust image height */
+  }
+
+  .about.container, .content.container, .doctor-form.container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  .about h2, .content h2, .doctor-form h2 {
+    font-size: 24px;
+    border-left-width: 3px;
+  }
+  .about h3 {
+    font-size: 20px;
+  }
+  .about p, .content p, .services-list li {
+    font-size: 15px;
+  }
+  .highlight {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Single column for footer boxes */
+    text-align: center;
+    gap: 25px;
+  }
+  .footer-box {
+    margin: 0; /* Remove margin for stacked boxes */
+  }
+  .footer-box ul {
+    padding-left: 0; /* Remove default list padding */
+  }
+  .footer-box ul li {
+    display: inline-block; /* Make quick links inline for better mobile layout */
+    margin: 0 8px 8px 0;
+  }
+  .footer-box ul li:last-child {
+    margin-right: 0;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+  }
+  .social li {
+    margin-bottom: 0;
+  }
+  footer {
+    padding: 30px 15px;
+  }
+}
+
+/* --- Extra Small devices (very small phones, less than 480px) --- */
+@media (max-width: 480px) {
+  .navbar .logo span {
+    font-size: 18px;
+  }
+  .navbar .logo img {
+    height: 60px;
+    width: 60px;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero h2 {
+    font-size: 26px;
+  }
+  .slogan {
+    font-size: 14px;
+  }
+  .popup-content {
+    padding: 20px;
+  }
+  .popup-content img {
+    width: 150px;
+  }
+  .popup-content h3 {
+    font-size: 20px;
+  }
+  .footer-box ul li {
+    margin: 0 5px 5px 0; /* Tighter spacing for quick links */
+  }
+}
